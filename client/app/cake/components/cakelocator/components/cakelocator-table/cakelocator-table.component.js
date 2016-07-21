@@ -14,8 +14,8 @@ CakelocatorTableController.$inject = [];
 let cakelocatorTableComponent = {
   restrict: 'E',
   bindings: {
-    cakeList: "=",
-    newCake: "="
+    cakeList: "=", // two-way binding 
+    newCake: "=" // two-way binding
   },
   template,
   controller: CakelocatorTableController,
