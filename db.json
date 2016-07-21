@@ -1,0 +1,46 @@
+{
+  "cakelist": [
+    {
+      "id": 1,
+      "type": "Sjokolade",
+      "location": "Bygg A",
+      "sizeLeft": "1"
+    },
+    {
+      "id": 2,
+      "type": "Marsipan",
+      "location": "Bygg B",
+      "sizeLeft": "2"
+    },
+    {
+      "type": "Appelsinkake",
+      "location": "Bygg C",
+      "sizeLeft": 3,
+      "id": 3
+    },
+    {
+      "type": "Banankake",
+      "location": "Bygg D",
+      "sizeLeft": 4,
+      "id": 4
+    },
+    {
+      "type": "Bringebær",
+      "location": "Bygg E",
+      "sizeLeft": 5,
+      "id": 5
+    },
+    {
+      "type": "Brannmann",
+      "location": "Bygg F",
+      "sizeLeft": 6,
+      "id": 6
+    },
+    {
+      "type": "Verdens beste",
+      "location": "Bygg A",
+      "sizeLeft": "1/2",
+      "id": 7
+    }
+  ]
+}
