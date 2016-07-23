@@ -5,7 +5,6 @@ import './cakelocator-table.styl';
 class CakelocatorTableController {
   constructor() {
     this.name = 'cakelocatorTable';
-    console.log(this.cakeList);
   }
 }
 

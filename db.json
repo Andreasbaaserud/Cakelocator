@@ -7,34 +7,52 @@
       "sizeLeft": "1"
     },
     {
-      "type": "Marsipan",
-      "location": "Bygg B",
-      "sizeLeft": "1/2",
+      "type": "kak",
+      "location": "lok",
+      "sizeLeft": "siz",
       "id": 2
     },
     {
-      "type": "Pavlova",
-      "location": "Bygg C",
-      "sizeLeft": 2,
+      "type": "kak1",
+      "location": "lok1",
+      "sizeLeft": "siz1",
       "id": 3
     },
     {
-      "type": "Bringebær",
-      "location": "Bygg D",
-      "sizeLeft": 3,
+      "type": "kak2",
+      "location": "lok2",
+      "sizeLeft": "siz2",
       "id": 4
     },
     {
-      "type": "Bjørnebær",
-      "location": "Bygg E",
-      "sizeLeft": 1,
+      "type": "kak3",
+      "location": "lok3",
+      "sizeLeft": "siz3",
       "id": 5
     },
     {
-      "type": "Sjokkis",
-      "location": "Bygg F",
-      "sizeLeft": 2,
+      "type": "kak4",
+      "location": "lok4",
+      "sizeLeft": "siz4",
       "id": 6
+    },
+    {
+      "type": "kak5",
+      "location": "lok5",
+      "sizeLeft": "siz5",
+      "id": 7
+    },
+    {
+      "type": "kak6",
+      "location": "lok6",
+      "sizeLeft": "siz6",
+      "id": 8
+    },
+    {
+      "type": "kak7",
+      "location": "lok7",
+      "sizeLeft": "siz7",
+      "id": 9
     }
   ]
 }

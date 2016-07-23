@@ -2,9 +2,8 @@ import template from './cakelocator.html';
 import './cakelocator.styl';
 
 class CakelocatorController {
-  constructor(CakelocatorService, $state) {
+  constructor(CakelocatorService) {
     this.name = 'cakelocator';
-    this.$state = $state;
     this.CakelocatorService = CakelocatorService;
 
     // cakelocator-table
@@ -17,26 +16,46 @@ class CakelocatorController {
       "sizeInput": ""
     };
 
-    CakelocatorService.getCakeList().then((response) => {
-      this.cakeList = response;
+    this.updateCakeList();
+
+/*
+    CakelocatorService.getLatestCake(this.cakeList.length).then((response) => {
+      for (var i = 0; i < response.length; i++) {
+        this.cakeList.push(response[i]);
+      }
+    });
+    */
+    
+  }
+
+  updateCakeList () {
+    this.CakelocatorService.getCakeList().then((response) => {
+      this.cakeList = angular.copy(response);
     });
   }
 
   saveCake () {
-    this.CakelocatorService.saveCake(this.newCake.typeInput, this.newCake.locationInput, this.newCake.sizeInput);
+    this.CakelocatorService.saveCake(this.newCake.typeInput, this.newCake.locationInput, this.newCake.sizeInput).then((res) => {
 
-    this.CakelocatorService.getCakeList().then((response) => {
-      this.cakeList = response;
+    this.updateCakeList();
+
+      /*
+      this.CakelocatorService.getLatestCake(this.cakeList.length).then((response) => {
+        for (var i = 0; i < response.length; i++) {
+          this.cakeList.push(response[i]);
+        }
+      });*/
     });
 
-    this.$state.go($state.current, {}, {reload: true}); //second parameter is for $stateParams
-    this.$state.reload(); // should be changed
-    //this.$scope.reload();
+    // empty strings
+    this.newCake.typeInput = "";
+    this.newCake.locationInput = "";
+    this.newCake.sizeInput = "";
   }
 
 }
 
-CakelocatorController.$inject = ["CakelocatorService", "$state"];
+CakelocatorController.$inject = ["CakelocatorService"];
 
 let cakelocatorComponent = {
   restrict: 'E',
